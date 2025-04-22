@@ -22,20 +22,32 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            cursor: pointer;
             background-color: #000;
         }
 
-        #launcher span {
-            font-size: 28px;
-            user-select: none;
+        .play-button {
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #ffcc00, #ff6600);
+            color: #000;
+            border: 4px solid #fff;
+            text-transform: uppercase;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
             text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ffcc00;
+        }
+
+        .play-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px #ff9900;
         }
     </style>
 </head>
 <body>
     <div id="launcher">
-        <span>▶ Escape Road</span>
+        <div class="play-button">▶ Play Escape Road</div>
     </div>
 
     <script>
@@ -43,7 +55,7 @@
         const gameUrl = 'https://script.google.com/macros/s/AKfycbysthcpOaHyHr6prqTqmfwkua02SpwIGDJGnZIqnMcy-OuCLkJ8WI-stwU6NhVnjoiz-Q/exec';
 
         launcher.addEventListener('click', () => {
-            window.location.href = gameUrl; // Redirects in same tab
+            window.location.href = gameUrl;
         });
     </script>
 </body>
